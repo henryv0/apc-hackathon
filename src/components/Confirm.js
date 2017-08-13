@@ -19,6 +19,8 @@ import FlatButton from 'material-ui/FlatButton';
 
 import Checkbox from 'material-ui/Checkbox';
 
+import Finish from './Finish';
+
 export default class Confirm extends Component {
   // constructor(props) {
   //   super(props);
@@ -52,7 +54,7 @@ export default class Confirm extends Component {
     return (
       <div style={{margin: '12px 0'}}>
         <RaisedButton
-          label={stepIndex === 3 ? 'Finish' : 'Next'}
+          label={stepIndex === 4 ? 'Finish' : 'Next'}
           disableTouchRipple={true}
           disableFocusRipple={true}
           primary={true}
@@ -203,7 +205,14 @@ export default class Confirm extends Component {
               <p>Relief packages available to you: </p>
 
               
-              {this.renderStepActions(2)}
+              {this.renderStepActions(3)}
+            </StepContent>
+          </Step>
+          <Step>
+            <StepLabel>Confirmation</StepLabel>
+            <StepContent>
+          		<Finish />
+            	{this.renderStepActions(4)}
             </StepContent>
           </Step>
         </Stepper>
