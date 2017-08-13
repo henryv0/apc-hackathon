@@ -17,59 +17,50 @@ import {
 
 import FlatButton from 'material-ui/FlatButton';
 
-import Checkbox from 'material-ui/Checkbox';
-
-export default class Finish extends React.Component {
+class ProcessStepper extends React.Component {
 
   state = {
-    finished: false,
     stepIndex: 0,
   };
 
   render() {
-    const {finished, stepIndex} = this.state;
+  	const stepIndex = this.state;
+  	
+  	return (
+  	  <div style={{width: 380, maxWidth: 380}}>
+        <Stepper activeStep={stepIndex}>
+          <Step>
+            <StepLabel>Submitted</StepLabel>
+          </Step>
+		  <Step>
+            <StepLabel>Approved</StepLabel>
+          </Step>
+          <Step>
+            <StepLabel>Paid</StepLabel>
+          </Step>
+          <Step>
+            <StepLabel>  </StepLabel>
+          </Step>
+        </Stepper>
+	  </div>
+  	);
+  }
+}
 
+export default class Finish extends React.Component {
+
+  render() {
     return (
       <div style={{width: 380, maxWidth: 700, margin: 'auto'}}>
       	<p>You have applied for 2 grants</p>
       	<p><b>National Disaster Recovery Payment</b></p>
       	<p>Applied 13 August 2017</p>
       	<p>Application Status</p>
-      	<div style={{width: 380, maxWidth: 380}}>
-        	<Stepper activeStep={stepIndex}>
-          	<Step>
-            	<StepLabel>Submitted</StepLabel>
-          	</Step>
-			<Step>
-            	<StepLabel>Approved</StepLabel>
-          	</Step>
-          	<Step>
-            	<StepLabel>Paid</StepLabel>
-          	</Step>
-          	<Step>
-            	<StepLabel>  </StepLabel>
-          	</Step>
-        	</Stepper>
-      	</div>
+      	<ProcessStepper />
       	<p><b>NSW Natural Disaster Relief Scheme</b></p>
      	<p>Applied 13 August 2017</p>
       	<p>Application Status</p>
-     	<div style={{width: 380, maxWidth: 380}}>
-			<Stepper activeStep={stepIndex}>
-          	<Step>
-            	<StepLabel>Submitted</StepLabel>
-          	</Step>
-			<Step>
-            	<StepLabel>Approved</StepLabel>
-          	</Step>
-          	<Step>
-            	<StepLabel>Paid</StepLabel>
-          	</Step>
-          	<Step>
-            	<StepLabel>  </StepLabel>
-          	</Step>			
-          	</Stepper>
-		</div>
+      	<ProcessStepper />
       </div>
     );
   }
