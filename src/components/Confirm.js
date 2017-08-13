@@ -14,19 +14,10 @@ import {
   StepLabel,
   StepContent,
 } from 'material-ui/Stepper';
-<<<<<<< HEAD
 
 import FlatButton from 'material-ui/FlatButton';
 
 import Checkbox from 'material-ui/Checkbox';
-=======
-// import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
-
-import Checkbox from 'material-ui/Checkbox';
-
-
->>>>>>> 33c56c36c9f53553790b9e3854752be9620268dc
 
 export default class Confirm extends Component {
   // constructor(props) {
@@ -145,11 +136,7 @@ export default class Confirm extends Component {
               <div>
                 {/* <AppBar title="Your Details"/> */}
                 <div style={{ padding: '1em' }}>
-<<<<<<< HEAD
                   <TextField defaultValue="Anil.Anz.01" floatingLabelText="Legal name" fullWidth={true}/><br />
-=======
-                  <TextField defaultValue="Firstname Lastname" floatingLabelText="Legal name" fullWidth={true}/><br />
->>>>>>> 33c56c36c9f53553790b9e3854752be9620268dc
                   <DatePicker hintText="DOB" fullWidth={true} defaultDate={new Date()} floatingLabelText="Date of Birth"/>
                   <TextField defaultValue="6112349876" floatingLabelText="Mobile number" fullWidth={true} type="number"/><br />
                   <TextField defaultValue="123 Road Street, Suburb NSW 2000" floatingLabelText="Address" fullWidth={true}/><br />
@@ -158,7 +145,6 @@ export default class Confirm extends Component {
                   {/*<br />
 
                    <span>Where do you want your payments made?</span><br /> */}
-<<<<<<< HEAD
 
                   {/* <DropDownMenu onChange={this.handleChange} 
                   style={{width: '100%', padding: '0'}} 
@@ -184,35 +170,6 @@ export default class Confirm extends Component {
                 <MenuItem value={2} primaryText="Flood" />
                 <MenuItem value={3} primaryText="Storm" />
               </DropDownMenu>
-
-=======
-
-                  {/* <DropDownMenu onChange={this.handleChange} 
-                  style={{width: '100%', padding: '0'}} 
-                  //autoWidth={false} 
-                  >
-                    <MenuItem value={1} primaryText="ANZ" />
-                    <MenuItem value={2} primaryText="Westpac" />
-                    <MenuItem value={3} primaryText="CBA" />
-                    <MenuItem value={4} primaryText="NAB" />
-                   </DropDownMenu><br/><br />  */}
-                  {/* <RaisedButton label="Next" /> */}
-                </div>
-              </div>
-              {this.renderStepActions(0)}
-            </StepContent>
-          </Step>
-          <Step>
-            <StepLabel>Disaster Details</StepLabel>
-            <StepContent>
-              <p>Which disaster were you affected by?</p>
-              <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-                <MenuItem value={1} primaryText="Bushfire" />
-                <MenuItem value={2} primaryText="Flood" />
-                <MenuItem value={3} primaryText="Storm" />
-              </DropDownMenu>
-
->>>>>>> 33c56c36c9f53553790b9e3854752be9620268dc
               <p>Date you were affected by the disaster</p>
               <DatePicker hintText="DOB" fullWidth={true} defaultDate={new Date()}/>
 
